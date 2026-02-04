@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Game App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>AI Game App</h1>
+
+    <div id="menu">
+        <button onclick="showSection('ticTacToe')">Tic-Tac-Toe</button>
+        <button onclick="showSection('chess')">Chess</button>
+        <button onclick="showSection('quiz')">Quiz</button>
+        <button onclick="showSection('findNumber')">Find My Number</button>
+    </div>
+
+    <div id="ticTacToe" class="game-section hidden">
+        <h2>Tic-Tac-Toe</h2>
+        <div id="ttt-board"></div>
+        <button onclick="resetTicTacToe()">Reset</button>
+    </div>
+
+    <div id="chess" class="game-section hidden">
+        <h2>Chess</h2>
+        <div id="chess-board"></div>
+        <button onclick="resetChess()">Reset</button>
+    </div>
+
+    <div id="quiz" class="game-section hidden">
+        <h2>Quiz</h2>
+        <div id="quiz-question"></div>
+        <input type="text" id="quiz-answer" placeholder="Type your answer">
+        <button onclick="checkQuizAnswer()">Submit</button>
+        <div id="quiz-feedback"></div>
+    </div>
+
+    <div id="findNumber" class="game-section hidden">
+        <h2>Find My Number</h2>
+        <p>Guess a number between 1-100</p>
+        <input type="number" id="guess" min="1" max="100">
+        <button onclick="checkGuess()">Guess</button>
+        <div id="guess-feedback"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
